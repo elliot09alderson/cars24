@@ -28,7 +28,7 @@ const BodyType = () => {
   return (
     <div className="flex flex-col ">
       <div
-        className="flex justify-between pb-6 cursor-pointer"
+        className="flex justify-between py-6 cursor-pointer"
         onClick={() => setOpen((prev) => !prev)}
       >
         <p className="text-lg font-semibold">Body Type</p>
@@ -40,17 +40,15 @@ const BodyType = () => {
       </div>
       {open ? (
         <div className="flex flex-wrap gap-2 items-center  ">
-       {BodyTypeData.map((item,idx)=>(
-        <div className="w-30 items-center p-8 bg-gray-200 rounded-lg ">
-            <div className="flex gap-2 items-center flex-col">
-
-            <img className="w-16 object-cover h-6" src={item.img} alt="" />
-            <p className="text-sm font-semibold ">{item.bodyName}</p>
-            <p className="text-sm text-gray-400">({item.count})</p>
+          {BodyTypeData.map((item, idx) => (
+            <div className="w-30 items-center p-8 bg-gray-200 rounded-lg ">
+              <div className="flex gap-2 items-center flex-col">
+                <img className="w-16 object-cover h-6" src={item.img} alt="" />
+                <p className="text-sm font-semibold ">{item.bodyName}</p>
+                <p className="text-sm text-gray-400">({item.count})</p>
+              </div>
             </div>
-        </div>
-
-       ))}
+          ))}
         </div>
       ) : (
         <div className="border-b border border-gray-200"></div>
